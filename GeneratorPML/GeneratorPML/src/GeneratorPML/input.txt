@@ -1,0 +1,9 @@
+@startuml
+
+package eng.task{
+
+interface Parseable{
++ parse (param : String) : void
+}
+
+@enduml
