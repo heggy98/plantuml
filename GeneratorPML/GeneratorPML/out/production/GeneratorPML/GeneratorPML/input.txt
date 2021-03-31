@@ -1,9 +1,37 @@
-@startuml
+package eng.task;
 
-package eng.task{
-
-interface Parseable{
-+ parse (param : String) : void
+interface Parseable {
+  void parse(String param);
 }
 
-@enduml
+public interface Formatable {
+  String format();
+}
+
+class Id {
+  private int id;
+
+  public int getId() {
+    return this.id;
+  }
+}
+
+class Record extends Id implements Parseable, Formatable {
+  @Override
+  public String recordFormat() {
+    throw new UnsupportedOperationException();
+  }
+
+  @Override
+  public void parse(String param) {
+    throw new UnsupportedOperationException();
+  }
+
+  public void updateId(int newId) {
+    this.updateId(newId, false);
+  }
+
+  public void updateId(int newId, boolean forceUpdate) {
+    throw new UnsupportedOperationException();
+  }
+}

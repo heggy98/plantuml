@@ -4,7 +4,7 @@ interface Parseable {
   void parse(String param);
 }
 
-public interface Formatable {
+interface Formatable {
   String format();
 }
 
@@ -18,7 +18,7 @@ class Id {
 
 class Record extends Id implements Parseable, Formatable {
   @Override
-  public String recordFormat() {
+  public String format() {
     throw new UnsupportedOperationException();
   }
 

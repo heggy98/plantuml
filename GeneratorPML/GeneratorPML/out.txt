@@ -1,0 +1,10 @@
+@startuml
+package eng.task{
+interface Formatable{
+format() : String
+interface Parseable{
+parse() : void
+class Id{- id : int
++ getId() : int
+class Record{+ recordFormat() : String
+@enduml
